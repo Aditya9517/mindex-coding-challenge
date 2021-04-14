@@ -26,6 +26,29 @@ The following endpoints are available to use:
     * PAYLOAD: Employee
     * RESPONSE: Employee
 ```
+
+The following endpoints were created for reporting structure:
+```
+* READ
+    * HTTP Method: GET 
+    * URL: localhost:8080/reportingstructure/{id}
+    * RESPONSE: ReportingStructure (employeeId, employeeName, numberOfReports) 
+```
+
+The following endpoints were created for compensation:
+```
+* CREATE
+    * HTTP Method: POST 
+    * URL: localhost:8080/compensation
+    * PAYLOAD: {employeeId, salary, effectiveDate}
+    * RESPONSE: Compensation (employeeId, salary, effectiveDate, Employee)
+
+* READ
+    * HTTP Method: GET 
+    * URL: localhost:8080/compensation/{id}
+    * RESPONSE: ReportingStructure (employeeId, numberOfReports) 
+```
+
 The Employee has a JSON schema of:
 ```json
 {
@@ -84,3 +107,6 @@ Compensation from the persistence layer.
 
 ## Delivery
 Please upload your results to a publicly accessible Git repo. Free ones are provided by Github and Bitbucket.
+
+## Output
+An example output of request/response for Task 1 and Task2 has been described in `output.txt`
